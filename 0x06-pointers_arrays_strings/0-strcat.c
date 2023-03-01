@@ -1,17 +1,25 @@
 #include "main.h"
 /**
- * _memset - sets memory to array
- * @s: array to set
- * @b: value to set it as
- * @n: n amount of times
- * Return: char value of s
+ * _strcat - function that concatenates two strings.
+ * @dest: destination of concat
+ * @src: source array to concat
+ * Return: char value
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_strcat(char *dest, char *src)
 {
-	unsigned int count;
+	int i = 0;
+	int j = 0;
 
-	for (count = 0; count < n; count++)
-		s[count] = b;
-	return (s);
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	i++;
+	return (dest);
 }
 
